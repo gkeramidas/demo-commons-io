@@ -10,6 +10,9 @@ scalacOptions += "-deprecation"
 
 releaseSettings
 
+// Publish artifacts to a local repository by default.
+publishTo := Some( Resolver.file("file", new File("/Users/gkeramidas/maven-repo/releases")))
+
 initialCommands in console := """
     |import org.apache.commons.io.monitor._
     |import net.keramida.demo.commons.io._
