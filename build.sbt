@@ -10,6 +10,11 @@ scalacOptions += "-deprecation"
 
 releaseSettings
 
+com.github.retronym.SbtOneJar.oneJarSettings
+
+mainClass in oneJar :=
+  Some("net.keramida.demo.commons.io.MonitorDemo")
+
 // Publish artifacts to a local repository by default.
 publishTo := Some( Resolver.file("file", new File("/Users/gkeramidas/maven-repo/releases")))
 
